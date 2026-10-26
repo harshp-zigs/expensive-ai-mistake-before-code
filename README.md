@@ -1,5 +1,7 @@
 # The Most Expensive AI Mistake Happens Before Any Code Is Written
 
+![The Most Expensive AI Mistake Happens Before Any Code Is Written](most-expensive-ai-mistake-before-coding.png)
+
 Many AI projects do not fail because of weak models or poor engineering. They fail earlier, when a team picks the wrong problem to solve. This repository explains why that happens and how **AI Opportunity Discovery Services** help business leaders decide which AI ideas deserve investment before any budget is committed.
 
 AI Opportunity Discovery Services start with the business, not the technology. They look at where time, cost or revenue are at stake, and which ideas are realistic given your data and systems. The goal is a short, ranked list of opportunities instead of a long list of experiments.
