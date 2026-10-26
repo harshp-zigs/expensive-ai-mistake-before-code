@@ -1,0 +1,223 @@
+:root {
+  --bg: #f4f8fe;
+  --surface: #ffffff;
+  --ink: #0b1630;
+  --muted: #4a5875;
+  --line: #d6e0f0;
+  --blue: #1a6bff;
+  --blue-dark: #0f4ec2;
+  --on-blue: #ffffff;
+  --tint: #e6efff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a1224;
+    --surface: #111b33;
+    --ink: #e8eefb;
+    --muted: #a6b4d0;
+    --line: #25345a;
+    --blue: #5b9bff;
+    --blue-dark: #8bb8ff;
+    --on-blue: #06142e;
+    --tint: #14233f;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.wrap {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+h1, h2, h3, .signposts strong, .button {
+  font-family: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.9rem, 4.6vw, 2.8rem);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  margin: 3.25rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--blue);
+  font-size: 1.55rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  margin: 1.75rem 0 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+p { margin: 0 0 1.2rem; }
+
+a {
+  color: var(--blue);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover { color: var(--blue-dark); }
+
+a:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.lede {
+  margin: 0 0 2rem;
+  font-size: 1.22rem;
+  line-height: 1.7;
+}
+
+.hero {
+  margin: 0 0 1rem;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.signposts {
+  list-style: none;
+  counter-reset: sign;
+  margin: 1.25rem 0 1.5rem;
+  padding: 0;
+}
+
+.signposts li {
+  counter-increment: sign;
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding: 0.85rem 1rem 0.85rem 3.4rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.signposts li::before {
+  content: counter(sign);
+  position: absolute;
+  left: 1rem;
+  top: 0.85rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  color: var(--on-blue);
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 50%;
+}
+
+.signposts strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checklist li {
+  position: relative;
+  padding: 0.55rem 0 0.55rem 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.95rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 2px solid var(--blue);
+  border-radius: 3px;
+}
+
+.cta {
+  margin-top: 3.5rem;
+  padding: 2rem;
+  background: var(--tint);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cta-text {
+  margin: 0 0 1.25rem;
+  font-family: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: var(--blue);
+  color: var(--on-blue);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.button:hover {
+  background: var(--blue-dark);
+  color: var(--on-blue);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  body { font-size: 1.04rem; }
+  .wrap { padding: 2.25rem 1.1rem 4rem; }
+  .lede { font-size: 1.1rem; }
+  .signposts li { padding-left: 3.2rem; }
+  .cta { padding: 1.5rem 1.1rem; }
+  .button { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
