@@ -1,6 +1,6 @@
 # The Most Expensive AI Mistake Happens Before Any Code Is Written
 
-![The Most Expensive AI Mistake Happens Before Any Code Is Written](most-expensive-ai-mistake-before-coding.png)
+![The Most Expensive AI Mistake Happens Before Any Code Is Written](most-expensive-ai-mistake-before-coding.jpeg)
 
 Many AI projects do not fail because of weak models or poor engineering. They fail earlier, when a team picks the wrong problem to solve. This repository explains why that happens and how **AI Opportunity Discovery Services** help business leaders decide which AI ideas deserve investment before any budget is committed.
 
