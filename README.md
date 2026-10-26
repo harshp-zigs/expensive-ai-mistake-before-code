@@ -62,7 +62,3 @@ If an idea cannot answer these, it is not ready to build.
 Discover how structured AI use case discovery can help your organization choose the right projects first.
 
 **[Get More Information](https://zignuts.com)**
-
----
-
-*This guide is shared for educational purposes. Feel free to star the repository if you found it useful.*
